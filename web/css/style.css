@@ -1,0 +1,26 @@
+body {
+    margin-top: 15%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 15%;
+}
+
+.large {
+    font-size: 75px;
+    height: 500px;
+    width: 350px;
+    overflow: auto;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    background: white;
+    width: 500px;
+}
+
+p {
+    color: teal;
+}
