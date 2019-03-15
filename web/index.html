@@ -24,6 +24,7 @@
             <h1>{{pages[currentPage].pageTitle}}</h1>
             <p>{{pages[currentPage].pageP1}}</p>
             <p>{{pages[currentPage].pageP2}}</p>
+            <p v-if="currentPage == '4'">{{shuffledArray()}}</p>
         </div>
         <button class="btn btn-info fas fa-arrow-right" v-on:click="goToNextPage()" :disabled="disableNext"></button>
         <button class="btn btn-info fas fa-redo-alt" onclick="location.reload()"></button>

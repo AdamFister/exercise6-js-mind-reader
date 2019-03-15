@@ -42,16 +42,50 @@ var app = new Vue({
         ],
         currentPage: 0,
         disableNext: false,
+        arrSymbol: ["&", "^", "%", "$", "#", "@", "!", "*", "?"]
+
     },
     methods: {
         goToNextPage() {
             this.currentPage++;
-            
+            console.log(this.currentPage);
+            // if (this.currentPage == 4) {
+            //     app.createSymbols();
+            //     //console.log(arrSymbol);
+            // }
             if (this.currentPage == 5) {
-                console.log(this.disableNext);
                 this.disableNext = true;
-                console.log(this.disableNext);
             }
-        }
-    }
-})
+        },
+
+        shuffledArray: function () {
+            for (var i = this.arrSymbol.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var temp = this.arrSymbol[i];
+                this.arrSymbol[i] = this.arrSymbol[j];
+                this.arrSymbol[j] = temp;
+                return this.arrSymbol;
+                // var str = "";
+                // var obj = document.getElementById("symbolsHere");
+
+
+                // var k = 0;
+                // for (let i = 0; i <= 10; i++) {
+                //     for (let j = 0; j < arrSymbol.length; j++) {
+
+                //         str += "<div class='row'>" + k + " - " + arrSymbol[j] + "</div>";
+                //         k++;
+                //     }
+                // }
+                // str += "<div class='row'>" + k + " - " + arrSymbol[0] + "</div>";
+
+                // console.log(str);
+                // obj.innerHTML = str;
+
+                // document.getElementById('answer').innerHTML = arrSymbol[0];
+                // document.getElementById('answerText').innerHTML = "Your symbol is " + arrSymbol[0];
+
+
+            }
+        
+    }}})
