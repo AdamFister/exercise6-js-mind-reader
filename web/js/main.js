@@ -47,11 +47,10 @@ var app = new Vue({
         goToNextPage() {
             this.currentPage++;
             
-            if (this.currentPage == 6) {
+            if (this.currentPage == 5) {
                 console.log(this.disableNext);
                 this.disableNext = true;
                 console.log(this.disableNext);
-                //return this.disableNext;
             }
         }
     }
